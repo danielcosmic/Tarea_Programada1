@@ -29,27 +29,15 @@ public class ListaEstudiantes {
             throw ex;//REVISAR ESTA EXCEPCION!!-R
         }
     }//fin del método imprimirListaEstudiantesEstudiantes
-
 //método para insertar un elemento al inicio de la ListaEstudiantes
     public static void insertarElementoAlInicio(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
-        nListaEstudiantes = new Estudiante[ListaEstudiantesInicial.length + 1];
-    }
-
-//crear un arreglo temporal para insertar un elemento extra al final
-        ListaEstudiantestemp = new Animal[ListaEstudiantesAnimales.length+1];
-        //insertamos el nuevo elemento en la posición 0
-        ListaEstudiantestemp[0] = new Animal("Anfibio","Sapo",1);
-        //recorremos el arreglo de objetos y asignamos cada elemento al temporal
-        for (int i=1; i<ListaEstudiantesAnimales.length+1; i++){
-            ListaEstudiantestemp[i] = ListaEstudiantesAnimales[i-1];
+        nListaEstudiantes[] = new Estudiante[ListaEstudiantes.length + 1];
+        nListaEstudiantes[0] = estudianteNuevo;
+        for (int i=1; i<ListaEstudiantes.length+1; i++){
+            nListaEstudiantes[i] = ListaEstudiantes[i-1];
         }
-        //igualamos o reasignamos la ListaEstudiantes original a la ListaEstudiantes temporal
-        ListaEstudiantesAnimales = ListaEstudiantestemp;
-        try{
-
-
-
-
+        ListaEstudiantes = nListaEstudiantes;
+    }
 //método para insertar un elemento al final de la Lista
     public static void insertarElementoAlFinal(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
         nListaEstudiantes[] = new Estudiante[ListaEstudiantes.length + 1];
