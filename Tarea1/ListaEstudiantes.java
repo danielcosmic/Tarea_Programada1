@@ -9,7 +9,7 @@ public class ListaEstudiantes {
         return ListaEstudiantes;
     }
 //fin setter y getter
-//métodos ListaEstudiantes
+//métodos de la clase ListaEstudiantes
 //método para imprimir la lista de estudiantes
     public static void imprimirListaEstudiantes(Estudiante[] ListaEstudiantes){
         try{
@@ -28,10 +28,11 @@ public class ListaEstudiantes {
         catch(Exception ex){//REVISAR ESTA EXCEPCION!!-R
             throw ex;//REVISAR ESTA EXCEPCION!!-R
         }
-    }//fin del método imprimirListaEstudiantesEstudiantes
-//método para insertar un elemento al inicio de la ListaEstudiantes
+    }//fin del método imprimirListaEstudiantes
+//método para insertar un elemento al inicio de la lista
     public static void insertarElementoAlInicio(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
-        nListaEstudiantes[] = new Estudiante[ListaEstudiantes.length + 1];
+        Estudiante nListaEstudiantes[];
+        nListaEstudiantes = new Estudiante[ListaEstudiantes.length + 1];
         nListaEstudiantes[0] = estudianteNuevo;
         for (int i=1; i<ListaEstudiantes.length+1; i++){
             nListaEstudiantes[i] = ListaEstudiantes[i-1];
@@ -40,7 +41,8 @@ public class ListaEstudiantes {
     }
 //método para insertar un elemento al final de la Lista
     public static void insertarElementoAlFinal(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
-        nListaEstudiantes[] = new Estudiante[ListaEstudiantes.length + 1];
+        Estudiante nListaEstudiantes[];
+        nListaEstudiantes = new Estudiante[ListaEstudiantes.length + 1];
         for (int i=0; i<ListaEstudiantes.length; i++){
             nListaEstudiantes[i] = ListaEstudiantes[i];
         }
