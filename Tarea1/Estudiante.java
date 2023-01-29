@@ -1,12 +1,12 @@
 public class Estudiante {
 //atributos Estudiante
-    String nombre;
-    String apellidos;
-    int cedula;
-    String carne;
-    double promedioPonderado;
-    String carrera;
-    int edad;
+    private String nombre;
+    private String apellidos;
+    private int cedula;
+    private String carne;
+    private double promedioPonderado;
+    private String carrera;
+    private int edad;
 //métodos Estudiante
 //constructor de la clase
     public Estudiante(String nombre, String apellidos, int cedula, String carne, double promedioPonderado,

@@ -1,45 +1,64 @@
 public class ListaEstudiantes {
-    //atributo lista de objetos de la clase Estudiante
-    Estudiante lista[];
-
-    //setter y getter
-    public void setLista(Estudiante[] lista) {
-        this.lista = lista;
+//atributo lista de objetos de la clase Estudiante
+    private Estudiante ListaEstudiantes[];
+//setter y getter
+    public void setListaEstudiantes(Estudiante[] ListaEstudiantes) {
+        this.ListaEstudiantes = ListaEstudiantes;
     }
-    public Estudiante[] getLista() {
-        return lista;
+    public Estudiante[] getListaEstudiantes() {
+        return ListaEstudiantes;
     }
-    //fin setter y getter
-
-    //método para imprimir la lista de estudiantes
-    public static void imprimirListaEstudiantes(Estudiante[] listaEstudiantesP){
+//fin setter y getter
+//métodos ListaEstudiantes
+//método para imprimir la lista de estudiantes
+    public static void imprimirListaEstudiantes(Estudiante[] ListaEstudiantes){
         try{
-            for (int i=0; i<listaEstudiantesP.length; i++){
+            for (int i=0; i<ListaEstudiantes.length; i++){
                 //impresión sugerida 2
                 System.out.println("Expediente #" + i+1 );
-                System.out.println("Nombre: " + listaEstudiantesP[i].getNombre());
-                System.out.println("Apellidos: " + listaEstudiantesP[i].getApellidos());
-                System.out.println("Cédula: " + listaEstudiantesP[i].getCedula());
-                System.out.println("Carné: " + listaEstudiantesP[i].getCarne());
-                System.out.println("Promedio Ponderado: " + listaEstudiantesP[i].getPromedioPonderado());
-                System.out.println("Carrera: " + listaEstudiantesP[i].getCarrera());
-                System.out.println("Edad: " + listaEstudiantesP[i].getEdad());
+                System.out.println("Nombre: " + ListaEstudiantes[i].getNombre());
+                System.out.println("Apellidos: " + ListaEstudiantes[i].getApellidos());
+                System.out.println("Cédula: " + ListaEstudiantes[i].getCedula());
+                System.out.println("Carné: " + ListaEstudiantes[i].getCarne());
+                System.out.println("Promedio Ponderado: " + ListaEstudiantes[i].getPromedioPonderado());
+                System.out.println("Carrera: " + ListaEstudiantes[i].getCarrera());
+                System.out.println("Edad: " + ListaEstudiantes[i].getEdad());
             }
         }
-        catch(Exception ex){//REVISAR ESTA EXCEPCION!!
-            throw ex;
+        catch(Exception ex){//REVISAR ESTA EXCEPCION!!-R
+            throw ex;//REVISAR ESTA EXCEPCION!!-R
         }
-    }//fin del método imprimirListaEstudiantes
+    }//fin del método imprimirListaEstudiantesEstudiantes
 
-    //método para insertar un elemento al final de la lista
-    public static Estudiante[] insertarElementoAlFinal(Estudiante listaInicial[], Estudiante estudianteNuevo){
-        Estudiante nLista[] = new Estudiante[listaInicial.length + 1];
-        for (int i=0; i<listaInicial.length ; i++){
-            nLista[i] = listaInicial[i];
+//método para insertar un elemento al inicio de la ListaEstudiantes
+    public static void insertarElementoAlInicio(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
+        nListaEstudiantes = new Estudiante[ListaEstudiantesInicial.length + 1];
+    }
+
+//crear un arreglo temporal para insertar un elemento extra al final
+        ListaEstudiantestemp = new Animal[ListaEstudiantesAnimales.length+1];
+        //insertamos el nuevo elemento en la posición 0
+        ListaEstudiantestemp[0] = new Animal("Anfibio","Sapo",1);
+        //recorremos el arreglo de objetos y asignamos cada elemento al temporal
+        for (int i=1; i<ListaEstudiantesAnimales.length+1; i++){
+            ListaEstudiantestemp[i] = ListaEstudiantesAnimales[i-1];
         }
-        nLista[listaInicial.length] = estudianteNuevo;
-        listaInicial = nLista;
-        return nLista;
+        //igualamos o reasignamos la ListaEstudiantes original a la ListaEstudiantes temporal
+        ListaEstudiantesAnimales = ListaEstudiantestemp;
+        try{
+
+
+
+
+//método para insertar un elemento al final de la Lista
+    public static void insertarElementoAlFinal(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
+        nListaEstudiantes[] = new Estudiante[ListaEstudiantes.length + 1];
+        for (int i=0; i<ListaEstudiantes.length; i++){
+            nListaEstudiantes[i] = ListaEstudiantes[i];
+        }
+        nListaEstudiantes[ListaEstudiantes.length] = estudianteNuevo;
+        ListaEstudiantes = nListaEstudiantes;
     }// fin del método insertarElementoAlFinal
-    
 }//fin clase
+//COMENTARIOS
+//todos los métodos los he hecho static, si quiere les cambia eso. Todavía no sé para que son jaja. -R
