@@ -39,7 +39,7 @@ public class ListaEstudiantes {
         }
         ListaEstudiantes = nListaEstudiantes;
     }
-//método para insertar un elemento al final de la Lista
+//método para insertar un elemento al final de la lista
     public static void insertarElementoAlFinal(Estudiante ListaEstudiantes[], Estudiante estudianteNuevo){
         Estudiante nListaEstudiantes[];
         nListaEstudiantes = new Estudiante[ListaEstudiantes.length + 1];
@@ -49,6 +49,6 @@ public class ListaEstudiantes {
         nListaEstudiantes[ListaEstudiantes.length] = estudianteNuevo;
         ListaEstudiantes = nListaEstudiantes;
     }// fin del método insertarElementoAlFinal
-}//fin clase
+}//fin de la clase
 //COMENTARIOS
 //todos los métodos los he hecho static, si quiere les cambia eso. Todavía no sé para que son jaja. -R
