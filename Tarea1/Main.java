@@ -44,4 +44,4 @@ public class Main {
         } while (opcion !=8);
         entrada.close();
     }//fin del main
-}//fin de la clase
+}// fin de la clase
